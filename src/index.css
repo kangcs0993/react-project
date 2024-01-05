@@ -1,13 +1,59 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+hr{
+	width: 35em;
+	margin: 2% auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#searchBarContainer{
+	width: 30em;
+	margin: 2% auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+#searchBar{
+	width: 80%;
+}
+
+#searchBarContainer > button{
+	width: 15%;
+}
+
+#mapContainer{
+	width: 80em;
+	height: 50em;
+	margin: auto;
+	position: relative;
+}
+
+#mapContainer > #__react-kakao-maps-sdk___Map{
+	width: 100%;
+	height: 100%
+}
+
+#photoContainer{
+	z-index: 1;
+	top: 5em;
+	left: 10em;
+	position: absolute;
+	width: 80%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	margin: auto;
+}
+
+#xSign{
+	width: 6em;
+	height: 6em;
+	position: absolute;
+}
+
+.cityPhoto{
+	width: 20em;
+	height: 20em;
+	margin: 3% auto;
+}
+
+.cityPhoto > img{
+	width: 100%;
+	height: 100%;
 }

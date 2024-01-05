@@ -9,9 +9,6 @@ export default function App(){
         <>
             <SearchBar setSearch={setSearch}></SearchBar>
 
-            <hr>
-            </hr>
-            
             <MapContainer search={search}></MapContainer>
         </>
     )

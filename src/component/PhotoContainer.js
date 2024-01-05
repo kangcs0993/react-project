@@ -13,19 +13,31 @@ export default function PhotoContainer({
 
     useEffect(() => {
         searchPhotos()
+
+        console.log("inside")
+        console.log(photos)
     }, [search])
 
     async function searchPhotos(){
         if(search.length > 0){
-            client.photos.search({query, per_page: 1}).then(photo => console.log(photo))
-            setPhotos(client.photos.search({query, per_page: 1}))
+            client.photos.search({query}).then(photo => {
+                setPhotos(photo["photos"])
+            })
         }
     }
 
-    console.log(photos)
+    const photoList = photos.map((photo) => {
+        return(
+            <div className='cityPhoto'>
+                <img src={photo["src"]["original"]}></img>
+            </div>
+        )
+    })
+
 
     return(
-        <div>
-        </div>
+        <>
+            {photoList}
+        </>
     )
 }
