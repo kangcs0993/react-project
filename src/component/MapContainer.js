@@ -69,7 +69,7 @@ export default function MapContainer({
     return (
         <>
             <Map center={{lat: 37.566826, lng: 126.9786567}}
-                level={3}
+                level={5}
                 onCreate={setMap}
             >
                 {markers.map((marker) => (

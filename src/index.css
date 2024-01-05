@@ -36,9 +36,12 @@ hr{
 	left: 10em;
 	position: absolute;
 	width: 80%;
+	height: 85%;
+	overflow: auto;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	margin: auto;
+	background: #232323d3;
 }
 
 #xSign{
