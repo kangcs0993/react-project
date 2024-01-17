@@ -72,6 +72,7 @@ export default function MapContainer({
                 level={5}
                 onCreate={setMap}
             >
+                //process.env.PUBLIC_URL
                 {markers.map((marker) => (
                     <MapMarker key={`marker-${marker.content}-${marker.position.lat},${marker.position.lng}`}
                             position={marker.position}
@@ -83,7 +84,7 @@ export default function MapContainer({
         
             {info && (
                 <div id="photoContainer">
-                    <img id="xSign" src="/img/x-sign.png" onClick={closePhotos}></img>
+                    <img id="xSign" src={process.env.PUBLIC_URL + "/img/x-sign.png"} onClick={closePhotos}></img>
                     <PhotoContainer search={search}></PhotoContainer>
                 </div>
             )}
